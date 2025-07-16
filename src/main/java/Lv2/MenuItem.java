@@ -20,7 +20,4 @@ public class MenuItem {
     public String getExplain() {
         return explain;
     }
-    public void printInfo() {
-        System.out.println(name + "|" + price + "|" + explain);
-    }
 }
