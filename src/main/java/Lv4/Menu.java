@@ -18,6 +18,7 @@ public class Menu {
     public List<MenuItem> getMenuItem() {
         return menuItem;
         }
+    //getter 메서드
 
     public void addMenuItem(MenuItem item) {
         menuItem.add(item);
@@ -28,4 +29,5 @@ public class Menu {
             System.out.println((i + 1) + ". " + menuItem.get(i));
         }
     }
+    //메뉴 리스트 순차적으로 출력
 }

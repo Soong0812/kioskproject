@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Kiosk {
-    private List<Menu> menu;
+    private final List<Menu> menu;
 
     public Kiosk() {
         menu = new ArrayList<Menu>();
@@ -15,7 +15,6 @@ public class Kiosk {
         burger.addMenuItem(new MenuItem("새우버거", "7,900원", "새우패티, 양상추, 양파, 마요네즈"));
         burger.addMenuItem(new MenuItem("치즈버거", "6,900원", "쇠고기패티, 양상추, 양파, 토마토, 체다치즈 2장"));
         burger.addMenuItem(new MenuItem("버섯버거", "6,900원", "쇠고기패티, 양상추, 양송이버섯, 양파, 트러플소스"));
-
         menu.add(burger);
 
         Menu drink = new Menu("음료");
@@ -23,7 +22,6 @@ public class Kiosk {
         drink.addMenuItem(new MenuItem("사이다", "3,000원", "칠성사이다"));
         drink.addMenuItem(new MenuItem("환타", "3,500원", "오렌지맛"));
         drink.addMenuItem(new MenuItem("미란다", "2,500원", "파인애플맛"));
-
         menu.add(drink);
     }
 
@@ -31,7 +29,7 @@ public class Kiosk {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("[카테고리를 선택하세요]");
+            System.out.println("[무엇을 주문하시겠습니까?]");
             for (int i = 0; i < menu.size(); i++) {
                 System.out.println((i + 1) + ". " + menu.get(i).getCategory());
             }
