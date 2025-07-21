@@ -20,4 +20,9 @@ public class MenuItem {
     public String getExplain() {
         return explain;
     }
+
+    @Override
+    public String toString() {
+        return name + " " + price + " " + explain;
+    }
 }
